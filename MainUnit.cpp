@@ -6,7 +6,7 @@
 #include "MainUnit.h"
 #include <Vcl.Imaging.jpeg.hpp>
 
-#include "GLS.Material.hpp" // <<< ДОБАВИТЬ ЭТУ СТРОКУ
+#include "GLS.Material.hpp"
 #include "GLS.Color.hpp"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
@@ -44,32 +44,6 @@ void __fastcall TForm1::FormCreate(TObject *Sender)
 
     GLSphere2->Material->Texture->Image->LoadFromFile(L"maps\\unigrid.bmp");
 	GLSphere2->Material->Texture->Enabled = true;
-//    // Загружаем сетку
-//    GLSphere2->Material->Texture->Image->LoadFromFile(L"maps\\unigrid.bmp");
-//    GLSphere2->Material->Texture->Enabled = true;
-//
-//    // --- ПРАВИЛЬНЫЙ СПОСОБ ДЛЯ СТАРЫХ ВЕРСИЙ GLSCENE (ПРОЗРАЧНОСТЬ) ---
-//    // Мы говорим текстуре: "Построй свой канал прозрачности, считая все белые пиксели невидимыми"
-//	GLSphere2->Material->Texture->ImageAlpha = tiaWhiteTransparent; // Если фон у unigrid.bmp черный, замени на tiaBlackTransparent
-//
-//    // Включаем режим смешивания, чтобы прозрачность заработала
-//    GLSphere2->Material->BlendingMode = bmTransparency;
-//
-//
-//    // --- ПРАВИЛЬНЫЙ СПОСОБ ДЛЯ СТАРЫХ ВЕРСИЙ GLSCENE (ЦВЕТ) ---
-//    // Мы напрямую устанавливаем компоненты цвета: Красный, Зеленый, Синий. 1.0 = максимум.
-//    GLSphere2->Material->FrontProperties->Emission.Color.x = 1.0; // Красный
-//    GLSphere2->Material->FrontProperties->Emission.Color.y = 1.0; // Зеленый
-//    GLSphere2->Material->FrontProperties->Emission.Color.z = 1.0; // Синий
-//	// Emission - это собственное свечение объекта, он не будет зависеть от источника света.
-
-	// Загружаем сетку
-//	GLSphere2->Material->Texture->Image->LoadFromFile(L"maps\\unigrid.bmp");
-//	GLSphere2->Material->Texture->Enabled = true;
-//
-//	// --- МАГИЯ ПРОЗРАЧНОСТИ ДЛЯ BMP ---
-//    // Указываем, что цвет левого нижнего пикселя картинки будет прозрачным
-//    GLSphere2->Material->BlendingMode = bmTransparency;
 }
 //---------------------------------------------------------------------------
 
@@ -84,13 +58,10 @@ void __fastcall TForm1::GLSceneViewer1MouseDown(TObject *Sender, TMouseButton Bu
 void __fastcall TForm1::GLSceneViewer1MouseMove(TObject *Sender, TShiftState Shift,
           int X, int Y)
 {
-    // Если зажата левая кнопка мыши (ssLeft)
-    if (Shift.Contains(ssLeft)) {
-        // Вращаем наш куб-пустышку (а вместе с ним и обе сферы внутри)
-        GLDummyCube1->Turn(X - mx);   // Вращение по горизонтали
-        GLDummyCube1->Pitch(Y - my);  // Вращение по вертикали
+	if (Shift.Contains(ssLeft)) {
+		GLDummyCube1->Turn(X - mx);
+		GLDummyCube1->Pitch(Y - my);
 
-        // Обновляем координаты мыши
         mx = X;
         my = Y;
 	}
