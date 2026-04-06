@@ -1,0 +1,127 @@
+unit Unit1;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, System.Sensors,
+  FMX.StdCtrls, FMX.Controls.Presentation, FMX.WebBrowser,
+  System.Sensors.Components,
+  System.Permissions; // Обязательный модуль для новых Android
+
+type
+  TForm1 = class(TForm)
+    LocationSensor1: TLocationSensor;
+    WebBrowser1: TWebBrowser;
+    LabelCoords: TLabel;
+    Panel1: TPanel;
+    LabelCountry: TLabel;
+    LabelCity: TLabel;
+    LabelStreet: TLabel;
+    procedure FormShow(Sender: TObject);
+    procedure LocationSensor1LocationChanged(Sender: TObject;
+      const OldLocation, NewLocation: TLocationCoord2D);
+  private
+    FGeocoder: TGeocoder;
+    procedure OnGeocodeReverseEvent(const Address: TCivicAddress);
+    // ИСПОЛЬЗУЕМ КЛАССИЧЕСКИЕ ТИПЫ DELPHI (TClassic...)
+    procedure RequestPermissionsResult(Sender: TObject; const APermissions: TClassicStringDynArray; const AGrantResults: TClassicPermissionStatusDynArray);
+  public
+    constructor Create(AOwner: TComponent); override;
+    destructor Destroy; override;
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.fmx}
+
+constructor TForm1.Create(AOwner: TComponent);
+begin
+  inherited;
+  FGeocoder := nil;
+end;
+
+destructor TForm1.Destroy;
+begin
+  if Assigned(FGeocoder) then
+    FGeocoder.Free;
+  inherited;
+end;
+
+procedure TForm1.FormShow(Sender: TObject);
+var
+  Perms: TClassicStringDynArray;
+begin
+  LabelCoords.Text := 'Запрос разрешений...';
+
+  {$IFDEF ANDROID}
+  // Задаем длину массива и заполняем его
+  SetLength(Perms, 2);
+  Perms[0] := 'android.permission.ACCESS_FINE_LOCATION';
+  Perms[1] := 'android.permission.ACCESS_COARSE_LOCATION';
+
+  // Вызываем окно разрешений (теперь компилятор точно поймет функцию)
+  PermissionsService.RequestPermissions(Perms, RequestPermissionsResult);
+  {$ELSE}
+  LocationSensor1.Active := True;
+  {$ENDIF}
+end;
+
+// Когда пользователь нажал "Разрешить" или "Отклонить"
+procedure TForm1.RequestPermissionsResult(Sender: TObject; const APermissions: TClassicStringDynArray; const AGrantResults: TClassicPermissionStatusDynArray);
+begin
+  if (Length(AGrantResults) > 0) and (AGrantResults[0] = TPermissionStatus.Granted) then
+  begin
+    LabelCoords.Text := 'Поиск спутников (включите Wi-Fi/Интернет)...';
+    LocationSensor1.Active := True;
+  end
+  else
+    LabelCoords.Text := 'Ошибка: Нет доступа к GPS!';
+end;
+
+// Когда сенсор получил координаты (Ваш код)
+procedure TForm1.LocationSensor1LocationChanged(Sender: TObject;
+  const OldLocation, NewLocation: TLocationCoord2D);
+var
+  URL, LatStr, LonStr: string;
+  FS: TFormatSettings;
+begin
+  FS := TFormatSettings.Create('en-US');
+  LatStr := FloatToStr(NewLocation.Latitude, FS);
+  LonStr := FloatToStr(NewLocation.Longitude, FS);
+
+  LabelCoords.Text := Format('Широта: %s Долгота: %s', [LatStr, LonStr]);
+
+  // Загружаем карту
+  URL := Format('https://maps.google.com/maps?q=%s,%s&output=embed',[LatStr, LonStr]);
+  WebBrowser1.Navigate(URL);
+
+  // Инициализируем геокодер для определения улицы
+  if not Assigned(FGeocoder) then
+  begin
+    if Assigned(TGeocoder.Current) then
+    begin
+      FGeocoder := TGeocoder.Current.Create;
+      FGeocoder.OnGeocodeReverse := OnGeocodeReverseEvent;
+    end;
+  end;
+
+  if Assigned(FGeocoder) and not FGeocoder.Geocoding then
+    FGeocoder.GeocodeReverse(NewLocation);
+end;
+
+// Когда сервер Google вернул нам название улицы (Ваш код)
+procedure TForm1.OnGeocodeReverseEvent(const Address: TCivicAddress);
+begin
+  if Assigned(Address) then
+  begin
+    LabelCountry.Text := 'Страна: ' + Address.CountryCode + ' / ' + Address.CountryName;
+    LabelCity.Text := 'Город: ' + Address.AdminArea + ' / ' + Address.Locality;
+    LabelStreet.Text := 'Улица: ' + Address.Thoroughfare + ', ' + Address.SubThoroughfare;
+  end;
+end;
+
+end.
