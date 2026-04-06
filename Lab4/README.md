@@ -27,7 +27,7 @@ var
   Lats, Longs, HTMLString: string;
   FS: TFormatSettings;
 begin
-  // Форматирование координат (разделитель - точка, обязательно для Google API)
+  // Форматирование координат (разделитель - точка, обязательно для API)
   FS := TFormatSettings.Create('en-US');
   Lats := FloatToStr(NewLocation.Latitude, FS);
   Longs := FloatToStr(NewLocation.Longitude, FS);
@@ -35,15 +35,9 @@ begin
   // Вывод координат на экран
   Label1.Text := Format('Широта: %s Долгота: %s', [Lats, Longs]);
 
-  // Генерация HTML-страницы для обхода переадресации intent://
-  HTMLString := Format(
-    '<html><body style="margin:0;padding:0;">' +
-    '<iframe width="100%%" height="100%%" frameborder="0" style="border:0;" ' +
-    'src="https://maps.google.com/maps?q=%s,%s&z=16&output=embed"></iframe>' +
-    '</body></html>', [Lats, Longs]);
-    
-  // Загрузка карты в WebBrowser
-  WebBrowser1.LoadFromStrings(HTMLString, '');
+  // Загружаем Карту
+  URL := Format('https://www.openstreetmap.org/?mlat=%s&mlon=%s#map=16/%s/%s', [Lats, Longs, Lats, Longs]);
+  WebBrowser1.Navigate(URL);
 
   // Обратное геокодирование (Координаты -> Адрес)
   if not Assigned(FGeocoder) then
@@ -58,5 +52,5 @@ begin
   if Assigned(FGeocoder) and not FGeocoder.Geocoding then
     FGeocoder.GeocodeReverse(NewLocation);
 end;
-
+```
 ![alt text](Screenshot_2026-04-06-18-15-56-67_57c6440c5213b5e28772eea05054fe6f.jpg)
