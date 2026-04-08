@@ -42,7 +42,6 @@ begin
   inherited;
 end;
 
-// ������� ��� ������ �����
 procedure TForm1.FormShow(Sender: TObject);
 begin
 
