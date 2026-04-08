@@ -1,4 +1,4 @@
-unit Unit1;
+﻿unit Unit1;
 
 interface
 
@@ -58,7 +58,7 @@ begin
   if (Length(AGrantResults) > 0) and (AGrantResults[0] = TPermissionStatus.Granted) then
     LocationSensor1.Active := True
   else
-    ShowMessage('��� ������ ���������� ��������� ������ � ����������!');
+    ShowMessage('Для работы приложения необходим доступ к геолокации!');
 end;
 
 procedure TForm1.LocationSensor1LocationChanged(Sender: TObject; const OldLocation,
@@ -73,7 +73,7 @@ begin
   Lats := FloatToStr(NewLocation.Latitude, FS);
   Longs := FloatToStr(NewLocation.Longitude, FS);
 
-  Label1.Text := Format('������: %s �������: %s', [Lats, Longs]);
+  Label1.Text := Format('Широта: %s Долгота: %s', [Lats, Longs]);
 
   URL := Format('https://www.openstreetmap.org/?mlat=%s&mlon=%s#map=16/%s/%s', [Lats, Longs, Lats, Longs]);
   WebBrowser1.Navigate(URL);
