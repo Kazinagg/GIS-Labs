@@ -1,0 +1,156 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{5BC33A0A-EC80-47E8-93CE-6DA8FB30B08D}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Atoms\Atomics.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Atoms\Mendeleev.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Optipit\Optipit_ru.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Optipit\Optipit.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="PitDigger\PitDigger.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="TerrainEditor\TerrainEditor.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Minliber\Minliber.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="TerrainMorphing\TerraMorfGR32.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="TerraMorph\TerraMorph.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Geochronology\Geochronology.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Stereonet\Stereonet.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Atomics">
+        <MSBuild Projects="Atoms\Atomics.dproj"/>
+    </Target>
+    <Target Name="Atomics:Clean">
+        <MSBuild Projects="Atoms\Atomics.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Atomics:Make">
+        <MSBuild Projects="Atoms\Atomics.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Mendeleev">
+        <MSBuild Projects="Atoms\Mendeleev.dproj"/>
+    </Target>
+    <Target Name="Mendeleev:Clean">
+        <MSBuild Projects="Atoms\Mendeleev.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Mendeleev:Make">
+        <MSBuild Projects="Atoms\Mendeleev.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Optipit_ru">
+        <MSBuild Projects="Optipit\Optipit_ru.dproj"/>
+    </Target>
+    <Target Name="Optipit_ru:Clean">
+        <MSBuild Projects="Optipit\Optipit_ru.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Optipit_ru:Make">
+        <MSBuild Projects="Optipit\Optipit_ru.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Optipit">
+        <MSBuild Projects="Optipit\Optipit.dproj"/>
+    </Target>
+    <Target Name="Optipit:Clean">
+        <MSBuild Projects="Optipit\Optipit.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Optipit:Make">
+        <MSBuild Projects="Optipit\Optipit.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PitDigger">
+        <MSBuild Projects="PitDigger\PitDigger.dproj"/>
+    </Target>
+    <Target Name="PitDigger:Clean">
+        <MSBuild Projects="PitDigger\PitDigger.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PitDigger:Make">
+        <MSBuild Projects="PitDigger\PitDigger.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TerrainEditor">
+        <MSBuild Projects="TerrainEditor\TerrainEditor.dproj"/>
+    </Target>
+    <Target Name="TerrainEditor:Clean">
+        <MSBuild Projects="TerrainEditor\TerrainEditor.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TerrainEditor:Make">
+        <MSBuild Projects="TerrainEditor\TerrainEditor.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Minliber">
+        <MSBuild Projects="Minliber\Minliber.dproj"/>
+    </Target>
+    <Target Name="Minliber:Clean">
+        <MSBuild Projects="Minliber\Minliber.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Minliber:Make">
+        <MSBuild Projects="Minliber\Minliber.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TerraMorfGR32">
+        <MSBuild Projects="TerrainMorphing\TerraMorfGR32.dproj"/>
+    </Target>
+    <Target Name="TerraMorfGR32:Clean">
+        <MSBuild Projects="TerrainMorphing\TerraMorfGR32.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TerraMorfGR32:Make">
+        <MSBuild Projects="TerrainMorphing\TerraMorfGR32.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TerraMorph">
+        <MSBuild Projects="TerraMorph\TerraMorph.dproj"/>
+    </Target>
+    <Target Name="TerraMorph:Clean">
+        <MSBuild Projects="TerraMorph\TerraMorph.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TerraMorph:Make">
+        <MSBuild Projects="TerraMorph\TerraMorph.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Geochronology">
+        <MSBuild Projects="Geochronology\Geochronology.dproj"/>
+    </Target>
+    <Target Name="Geochronology:Clean">
+        <MSBuild Projects="Geochronology\Geochronology.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Geochronology:Make">
+        <MSBuild Projects="Geochronology\Geochronology.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Stereonet">
+        <MSBuild Projects="Stereonet\Stereonet.dproj"/>
+    </Target>
+    <Target Name="Stereonet:Clean">
+        <MSBuild Projects="Stereonet\Stereonet.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Stereonet:Make">
+        <MSBuild Projects="Stereonet\Stereonet.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Atomics;Mendeleev;Optipit_ru;Optipit;PitDigger;TerrainEditor;Minliber;TerraMorfGR32;TerraMorph;Geochronology;Stereonet"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Atomics:Clean;Mendeleev:Clean;Optipit_ru:Clean;Optipit:Clean;PitDigger:Clean;TerrainEditor:Clean;Minliber:Clean;TerraMorfGR32:Clean;TerraMorph:Clean;Geochronology:Clean;Stereonet:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Atomics:Make;Mendeleev:Make;Optipit_ru:Make;Optipit:Make;PitDigger:Make;TerrainEditor:Make;Minliber:Make;TerraMorfGR32:Make;TerraMorph:Make;Geochronology:Make;Stereonet:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,149 @@
+inherited FormGridGeneration: TFormGridGeneration
+  Caption = 'Grid Generation'
+  ClientWidth = 568
+  Position = ScreenCenter
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  inherited PanelTop: TPanel
+    Size.Width = 568.000000000000000000
+    Size.Height = 177.000000000000000000
+    inherited PanelInputA: TPanel
+      Size.Width = 548.000000000000000000
+      Size.Height = 177.000000000000000000
+      inherited LabelInputA: TLabel
+        Size.Width = 548.000000000000000000
+      end
+      inherited ToolBarInputA: TToolBar
+        Size.Width = 538.000000000000000000
+        inherited sbDholes: TSpeedButton
+          Visible = False
+        end
+        inherited sbPoints3D: TSpeedButton
+          Position.X = 40.000000000000000000
+        end
+        inherited sbPolygons: TSpeedButton
+          Position.X = 80.000000000000000000
+          Visible = False
+        end
+        inherited sbTINs: TSpeedButton
+          Position.X = 80.000000000000000000
+          Visible = False
+        end
+        inherited sbSolids: TSpeedButton
+          Position.X = 80.000000000000000000
+          Visible = False
+        end
+        inherited sbGrids2D: TSpeedButton
+          Position.X = 80.000000000000000000
+          Visible = False
+        end
+        inherited sbGrids3D: TSpeedButton
+          Position.X = 80.000000000000000000
+          Visible = False
+        end
+        inherited sbMeshes2D: TSpeedButton
+          Position.X = 80.000000000000000000
+          Visible = False
+        end
+        inherited sbMeshes3D: TSpeedButton
+          Position.X = 80.000000000000000000
+          Visible = False
+        end
+      end
+      inherited PanelAttributes: TPanel
+        Size.Width = 281.000000000000000000
+        Size.Height = 120.000000000000000000
+        inherited LabelAttributesA: TLabel
+          Size.Width = 281.000000000000000000
+          Text = #1052#1072#1090#1077#1088#1080#1072#1083
+        end
+        inherited ListBoxAttributesA: TListBox
+          Size.Width = 281.000000000000000000
+          Size.Height = 103.000000000000000000
+          Viewport.Width = 277.000000000000000000
+          Viewport.Height = 99.000000000000000000
+        end
+      end
+      inherited PanelModels: TPanel
+        Size.Width = 257.000000000000000000
+        Size.Height = 120.000000000000000000
+        inherited LabelModelsA: TLabel
+          Size.Width = 257.000000000000000000
+          Text = 'Points'
+        end
+        inherited ListBoxInputA: TListBox
+          Size.Width = 257.000000000000000000
+          Size.Height = 103.000000000000000000
+          Viewport.Width = 253.000000000000000000
+          Viewport.Height = 99.000000000000000000
+        end
+      end
+    end
+  end
+  inherited PanelMiddle: TPanel
+    Position.Y = 177.000000000000000000
+    Size.Width = 568.000000000000000000
+    Size.Height = 257.000000000000000000
+    object gbModelSize: TGroupBox
+      Align = Client
+      Size.Width = 568.000000000000000000
+      Size.Height = 257.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Model Size'
+      TabOrder = 0
+      object Image1: TImage
+        MultiResBitmap = <
+          item
+          end>
+        Position.X = 24.000000000000000000
+        Position.Y = 64.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Image2: TImage
+        MultiResBitmap = <
+          item
+          end>
+        Position.X = 312.000000000000000000
+        Position.Y = 160.000000000000000000
+      end
+      object Image3: TImage
+        MultiResBitmap = <
+          item
+          end>
+        Position.X = 40.000000000000000000
+        Position.Y = 168.000000000000000000
+      end
+    end
+  end
+  inherited PanelBottom: TPanel
+    Size.Width = 568.000000000000000000
+    Size.Height = 130.000000000000000000
+    inherited ButtonOK: TButton
+      Position.X = 280.000000000000000000
+    end
+    inherited ButtonCancel: TButton
+      Position.X = 376.000000000000000000
+    end
+    inherited ButtonHelp: TButton
+      Position.X = 472.000000000000000000
+    end
+    inherited ToolBar2: TToolBar
+      Size.Width = 568.000000000000000000
+      inherited LabelEmpty: TLabel
+        Size.Width = 195.000000000000000000
+      end
+      inherited EditOutput: TEdit
+        Size.Width = 213.000000000000000000
+      end
+    end
+    inherited LabelOutput: TLabel
+      Size.Width = 558.000000000000000000
+    end
+  end
+  inherited ImageListOutput: TImageList
+    Left = 184
+    Top = 97
+  end
+end

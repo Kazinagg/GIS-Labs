@@ -1,0 +1,106 @@
+object fmSceneVR: TfmSceneVR
+  Left = 298
+  Top = 121
+  Margins.Left = 5
+  Margins.Top = 5
+  Margins.Right = 5
+  Margins.Bottom = 5
+  Caption = 'VR Scene'
+  ClientHeight = 725
+  ClientWidth = 1087
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -18
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  FormStyle = fsMDIChild
+  Position = poDefault
+  Visible = True
+  OnClose = FormClose
+  OnResize = FormResize
+  PixelsPerInch = 168
+  TextHeight = 24
+  object PanelTop: TPanel
+    Left = 0
+    Top = 0
+    Width = 1087
+    Height = 725
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
+    Align = alClient
+    BevelOuter = bvNone
+    Caption = 'PanelTop'
+    DockSite = True
+    TabOrder = 0
+    object PanelTopRight: TPanel
+      Left = 534
+      Top = 0
+      Width = 553
+      Height = 725
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
+      Align = alClient
+      DragKind = dkDock
+      DragMode = dmAutomatic
+      TabOrder = 0
+      object glsViewerRight: TGLSceneViewer
+        Left = 1
+        Top = 1
+        Width = 551
+        Height = 723
+        Margins.Left = 5
+        Margins.Top = 5
+        Margins.Right = 5
+        Margins.Bottom = 5
+        PenAsTouch = False
+        Align = alClient
+        TabOrder = 0
+        ExplicitLeft = 2
+        ExplicitTop = 2
+        ExplicitWidth = 549
+        ExplicitHeight = 721
+      end
+    end
+    object PanelTopLeft: TPanel
+      Left = 0
+      Top = 0
+      Width = 534
+      Height = 725
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
+      Align = alLeft
+      DragKind = dkDock
+      DragMode = dmAutomatic
+      Locked = True
+      TabOrder = 1
+      object glsViewerLeft: TGLSceneViewer
+        Left = 1
+        Top = 1
+        Width = 532
+        Height = 723
+        Margins.Left = 5
+        Margins.Top = 5
+        Margins.Right = 5
+        Margins.Bottom = 5
+        PenAsTouch = False
+        Align = alClient
+        TabOrder = 0
+        ExplicitLeft = 2
+        ExplicitTop = 2
+        ExplicitWidth = 530
+        ExplicitHeight = 721
+      end
+    end
+  end
+  object GLScene: TGLScene
+    Left = 16
+    Top = 16
+  end
+end

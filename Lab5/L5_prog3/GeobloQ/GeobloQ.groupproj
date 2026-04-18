@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{628FAA3C-295A-4EFB-88EC-CD8AC086B690}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="projects\Geoblock.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="packages\GBComps.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="projects\Gexoblock_ru.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Geoblock">
+        <MSBuild Projects="projects\Geoblock.dproj"/>
+    </Target>
+    <Target Name="Geoblock:Clean">
+        <MSBuild Projects="projects\Geoblock.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Geoblock:Make">
+        <MSBuild Projects="projects\Geoblock.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GBComps">
+        <MSBuild Projects="packages\GBComps.dproj"/>
+    </Target>
+    <Target Name="GBComps:Clean">
+        <MSBuild Projects="packages\GBComps.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GBComps:Make">
+        <MSBuild Projects="packages\GBComps.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Gexoblock_ru">
+        <MSBuild Projects="projects\Gexoblock_ru.dproj"/>
+    </Target>
+    <Target Name="Gexoblock_ru:Clean">
+        <MSBuild Projects="projects\Gexoblock_ru.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Gexoblock_ru:Make">
+        <MSBuild Projects="projects\Gexoblock_ru.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Geoblock;GBComps;Gexoblock_ru"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Geoblock:Clean;GBComps:Clean;Gexoblock_ru:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Geoblock:Make;GBComps:Make;Gexoblock_ru:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

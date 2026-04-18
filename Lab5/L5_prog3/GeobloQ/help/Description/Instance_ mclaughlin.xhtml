@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="./Instance_ mclaughlin_files/test.css" />
+    <title>Instance: mclaughlin</title>
+  </head>
+	<body>
+		<div id="wrap">
+    <div class="navbar">
+      <ul>
+        <li><a href="http://mansci-web.uai.cl/minelib/Help.xhtml">Help</a></li>
+        <li><a href="http://mansci-web.uai.cl/minelib/Datasets.xhtml">Datasets</a></li>
+        <li><a href="http://mansci-web.uai.cl/minelib/Results.xhtml">Results</a></li>
+        <li><a href="http://mansci-web.uai.cl/minelib/Applications.xhtml">Utilities</a></li>
+      </ul>
+    </div>
+    <h1> Instance: mclaughlin </h1>
+    <a href="./Instance_ mclaughlin_files/mclaughlin.jpg"><img height="200px" src="./Instance_ mclaughlin_files/mclaughlin.jpg" alt="mine picture" class="mine_image" /></a>
+    <ol id="toc">
+      <li id="content">Contents:</li>
+      <li><a href="http://mansci-web.uai.cl/minelib/mclaughlin.xhtml#mozTocId218371">Information</a></li>
+      <li><a href="http://mansci-web.uai.cl/minelib/mclaughlin.xhtml#mozTocId958846">File downloads</a></li>
+      <li><a href="http://mansci-web.uai.cl/minelib/mclaughlin.xhtml#mozTocId536400">Solution files</a>
+        <ol>
+          <li><a href="http://mansci-web.uai.cl/minelib/mclaughlin.xhtml#mozTocId777748">UPIT</a></li>
+          <li><a href="http://mansci-web.uai.cl/minelib/mclaughlin.xhtml#mozTocId341579">CPIT</a></li>
+          <li><a href="http://mansci-web.uai.cl/minelib/mclaughlin.xhtml#mozTocId782032">PCPSP</a></li>
+        </ol>
+      </li>
+      <li><a href="http://mansci-web.uai.cl/minelib/mclaughlin.xhtml#mozTocId492052">References</a></li>
+    </ol>
+    <br />
+    <h2><a id="mozTocId218371" class="mozTocH2" />Information:</h2>
+    <dl>
+      <dt>Description:</dt>
+        <dd>McLaughlin defunct gold mine located in CA, USA.</dd>
+      <dt>Block model:</dt>
+        <dd>2'140'342 blocks of size 25x25x20ft</dd>
+        <dd>Precedences computed with a 45 degrees pit slope (8 levels)</dd>
+      <dt>Blockfile columns detail:</dt>
+        <dd>id x y z blockvalue ton destination Au(oz/ton)</dd>
+      <dt>Blockvalue computation</dt>
+        <dd>UPIT &amp; CPIT: precomputed using apriori destination</dd>
+        <dd>PCPSP: Computed using $900/oz (Au Price), $1.32/ton (mining cost),
+          $19/ton (proc.cost) 90% (recovery) <br />
+        </dd>
+        <dd>Discount rate = 0.15</dd>
+      <dt>Type of Constraints:</dt>
+        <dd>C0 Capacity constraint (Mill): Total processed tonnage &lt;= 3.3M
+          tons<br />
+        </dd>
+    </dl>
+    <h2><a id="mozTocId958846" class="mozTocH2" />File downloads:</h2>
+    <ul>
+      <li>.blocks file: <a href="http://mansci-web.uai.cl/minelib/data/mclaughlin.blocks">mclaughlin.blocks</a><br />
+      </li>
+      <li>.prec file: <a href="http://mansci-web.uai.cl/minelib/data/mclaughlin.prec">mclaughlin.prec</a></li>
+      <li>.upit file: <a href="http://mansci-web.uai.cl/minelib/data/mclaughlin.upit">mclaughlin.upit</a></li>
+      <li>.cpit file: <a href="http://mansci-web.uai.cl/minelib/data/mclaughlin.cpit">mclaughlin.cpit</a></li>
+      <li>.pcpsp file: <a href="http://mansci-web.uai.cl/minelib/data/mclaughlin.pcpsp">mclaughlin.pcpsp</a></li>
+    </ul>
+    Download the <a href="http://mansci-web.uai.cl/minelib/minelib_format.pdf">Minelib data format specification</a>.
+    <h2><a id="mozTocId536400" class="mozTocH2" />Solution files:</h2>
+    <h3><a id="mozTocId777748" class="mozTocH3" />UPIT</h3>
+    <dl>
+      <dt>Download: <a href="http://mansci-web.uai.cl/minelib/sols/mclaughlin_upit.sol">mclaughlin_upit.sol</a></dt>
+        <dd>Objective value: 1,495,886,962</dd>
+        <dd>Computed using Hochbaum's pseudoflow algorithm. <a href="http://mansci-web.uai.cl/minelib/mclaughlin.xhtml#cite:hochbaumpsudoflow">[*]</a>
+          <br />
+        </dd>
+    </dl>
+    <h3><a id="mozTocId341579" class="mozTocH3" />CPIT</h3>
+    <dl>
+      <dt>Download: <a href="http://mansci-web.uai.cl/minelib/sols/mclaughlin_cpit_gmunoz120723.sol">mclaughlin_cpit_gmunoz120723.sol</a></dt>
+        <dd>Objective value: 1,073,327,197 (LP GAP 0.5%)</dd>
+        <dd>Provided by Gonzalo Muñoz, and obtained from the LP relaxation using
+          a modified TopoSort heuristic. <a href="http://mansci-web.uai.cl/minelib/mclaughlin.xhtml#cite:gmunoz_tesis">[*]</a></dd>
+      <dt>Download: <a href="http://mansci-web.uai.cl/minelib/sols/mclaughlin.LPcpit">mclaughlin.LPcpit</a></dt>
+        <dd>LP relaxation solution (not feasible)</dd>
+        <dd>Objective value: 1,079,024,268</dd>
+        <dd>Computed using a modified version of Bienstock &amp; Zuckerberg
+          algorithm. <a href="http://mansci-web.uai.cl/minelib/mclaughlin.xhtml#cite:bzipco2010">[*]</a></dd>
+    </dl>
+    <h3><a id="mozTocId782032" class="mozTocH3" />PCPSP</h3>
+    <dl>
+      <dt>Download: <a href="http://mansci-web.uai.cl/minelib/sols/mclaughlin_pcpsp_gmunoz120723.sol">mclaughlin_pcpsp_gmunoz120723.sol</a></dt>
+        <dd>Objective value: 1,510,126,435 (LP GAP 0.2%)</dd>
+        <dd>Provided by Gonzalo Muñoz, and obtained from the LP relaxation using
+          a modified TopoSort heuristic.<a href="http://mansci-web.uai.cl/minelib/mclaughlin.xhtml#cite:gmunoz_tesis">[*]</a></dd>
+      <dt>Download: <a href="http://mansci-web.uai.cl/minelib/sols/mclaughlin.LPcpit">mclaughlin.LPpcpsp</a></dt>
+        <dd>LP relaxation solution (not feasible)</dd>
+        <dd>Objective value: 1,512,971,680<br />
+        </dd>
+        <dd>Computed using a modified version of Bienstock &amp; Zuckerberg
+          algorithm.<a href="http://mansci-web.uai.cl/minelib/mclaughlin.xhtml#cite:bzipco2010">[*]</a><br />
+        </dd>
+    </dl>
+    <h2><a id="mozTocId492052" class="mozTocH2" />References:</h2>
+    <ul class="references">
+      <li><a id="cite:bzipco2010" />Daniel Bienstock,
+        Mark Zuckerberg (2010), Solving LP Relaxations of Large-Scale Precedence
+        Constrained Problems. IPCO 2010: 1-14</li>
+      <li><a id="cite:hochbaumpsudoflow" />Dorit
+        S. Hochbaum (2008), The Pseudoflow Algorithm: A New Algorithm for the
+        Maximum-Flow Problem. Operations Research 56(4): 992-1009<br />
+      </li>
+      <li><a id="cite:gmunoz_tesis" />Gonzalo Muñoz
+        (2012), Modelos de optimizacion lineal entera y aplicaciones a la
+        mineria. Master thesis, Dept. Mathematical Engineering, Universidad de
+        Chile.<br />
+      </li>
+    </ul>
+    <p class="logos">
+    <a href="http://validator.w3.org/check?uri=referer"><img src="./Instance_ mclaughlin_files/valid-xhtml10-blue" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+    </p>
+    </div>
+  </body>
+</html>

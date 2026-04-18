@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="./Instance_ zuck_small_files/test.css" />
+    <title>Instance: zuck_small</title>
+  </head>
+	<body>
+		<div id="wrap">
+    <div class="navbar">
+      <ul>
+        <li><a href="http://mansci-web.uai.cl/minelib/Help.xhtml">Help</a></li>
+        <li><a href="http://mansci-web.uai.cl/minelib/Datasets.xhtml">Datasets</a></li>
+        <li><a href="http://mansci-web.uai.cl/minelib/Results.xhtml">Results</a></li>
+        <li><a href="http://mansci-web.uai.cl/minelib/Applications.xhtml">Utilities</a></li>
+      </ul>
+    </div>
+    <h1> Instance: zuck_small </h1>
+    <a href="./Instance_ zuck_small_files/zuck_small.jpg"><img height="200px" src="./Instance_ zuck_small_files/zuck_small.jpg" alt="mine picture" class="mine_image" /></a>
+    <ol id="toc">
+      <li id="content">Contents:</li>
+      <li><a href="http://mansci-web.uai.cl/minelib/zuck_small.xhtml#mozTocId218371">Information</a></li>
+      <li><a href="http://mansci-web.uai.cl/minelib/zuck_small.xhtml#mozTocId958846">File downloads</a></li>
+      <li><a href="http://mansci-web.uai.cl/minelib/zuck_small.xhtml#mozTocId536400">Solution files</a>
+        <ol>
+          <li><a href="http://mansci-web.uai.cl/minelib/zuck_small.xhtml#mozTocId777748">UPIT</a></li>
+          <li><a href="http://mansci-web.uai.cl/minelib/zuck_small.xhtml#mozTocId341579">CPIT</a></li>
+          <li><a href="http://mansci-web.uai.cl/minelib/zuck_small.xhtml#mozTocId782032">PCPSP</a></li>
+        </ol>
+      </li>
+      <li><a href="http://mansci-web.uai.cl/minelib/zuck_small.xhtml#mozTocId492052">References</a></li>
+    </ol>
+    <br />
+    <h2><a id="mozTocId218371" class="mozTocH2" />Information:</h2>
+    <dl>
+      <dt>Description:</dt>
+        <dd>Mine provided by Mark Zuckenberg</dd>
+      <dt>Block model:</dt>
+        <dd>9400 blocks of unknown size</dd>
+        <dd>precedence precomputed by provider</dd>
+      <dt>Blockfile columns detail:</dt>
+        <dd>id x y z cost value rock_tonnes ore_tonnes</dd>
+      <dt>Blockvalue computation</dt>
+        <dd>precomputed by provider
+        </dd>
+        <dd>Discount rate = 0.1</dd>
+      <dt>Type of Constraints:</dt>
+        <dd>C0 Capacity constraint (mine): Total extracted tonnage &lt; 60M</dd>
+        <dd>C1 Capacity constraint (process): Total processed tonnage &lt; 20M</dd>
+    </dl>
+    <h2><a id="mozTocId958846" class="mozTocH2" />File downloads:</h2>
+    <ul>
+      <li>.blocks file: <a href="http://mansci-web.uai.cl/minelib/data/zuck_small.blocks">zuck_small.blocks</a><br />
+      </li>
+      <li>.prec file: <a href="http://mansci-web.uai.cl/minelib/data/zuck_small.prec">zuck_small.prec</a></li>
+      <li>.upit file: <a href="http://mansci-web.uai.cl/minelib/data/zuck_small.upit">zuck_small.upit</a></li>
+      <li>.cpit file: <a href="http://mansci-web.uai.cl/minelib/data/zuck_small.cpit">zuck_small.cpit</a></li>
+      <li>.pcpsp file: <a href="http://mansci-web.uai.cl/minelib/data/zuck_small.pcpsp">zuck_small.pcpsp</a></li>
+    </ul>
+    Download the <a href="http://mansci-web.uai.cl/minelib/minelib_format.pdf">Minelib data format specification</a>.
+    <h2><a id="mozTocId536400" class="mozTocH2" />Solution files:</h2>
+    <h3><a id="mozTocId777748" class="mozTocH3" />UPIT</h3>
+    <dl>
+      <dt>Download: <a href="http://mansci-web.uai.cl/minelib/sols/zuck_small_upit.sol">zuck_small_upit.sol</a></dt>
+        <dd>Objective value: 1,422,726,898</dd>
+        <dd>Computed using Hochbaum's pseudoflow algorithm. <a href="http://mansci-web.uai.cl/minelib/zuck_small.xhtml#cite:hochbaumpsudoflow">[*]</a>
+        </dd>
+    </dl>
+    <h3><a id="mozTocId341579" class="mozTocH3" />CPIT</h3>
+    <dl>
+      <dt>Download: <a href="http://mansci-web.uai.cl/minelib/sols/zuck_small_cpit_gmunoz120723.sol">zuck_small_cpit_gmunoz120723.sol</a></dt>
+        <dd>Objective value: 788,652,600 (LP GAP 7.7%)</dd>
+        <dd>Provided by Gonzalo Muñoz, and obtained from the LP relaxation using
+          a modified TopoSort heuristic. <a href="http://mansci-web.uai.cl/minelib/zuck_small.xhtml#cite:gmunoz_tesis">[*]</a></dd>
+      <dt>Download: <a href="http://mansci-web.uai.cl/minelib/sols/zuck_small.LPcpit">zuck_small.LPcpit</a></dt>
+        <dd>LP relaxation solution (not feasible)</dd>
+        <dd>Objective value: 854,182,396</dd>
+        <dd>Computed using a modified version of Bienstock &amp; Zuckerberg
+          algorithm. <a href="http://mansci-web.uai.cl/minelib/zuck_small.xhtml#cite:bzipco2010">[*]</a></dd>
+    </dl>
+    <h3><a id="mozTocId782032" class="mozTocH3" />PCPSP</h3>
+    <dl>
+      <dt>Download: <a href="http://mansci-web.uai.cl/minelib/sols/zuck_small_pcpsp_gmunoz120723.sol">zuck_small_pcpsp_gmunoz120723.sol</a></dt>
+        <dd>Objective value: 872,372,967 (LP GAP 3.7%)</dd>
+        <dd>Provided by Gonzalo Muñoz, and obtained from the LP relaxation using
+          a modified TopoSort heuristic.<a href="http://mansci-web.uai.cl/minelib/zuck_small.xhtml#cite:gmunoz_tesis">[*]</a></dd>
+      <dt>Download: <a href="http://mansci-web.uai.cl/minelib/sols/zuck_small.LPcpit">zuck_small.LPpcpsp</a></dt>
+        <dd>LP relaxation solution (not feasible)</dd>
+        <dd>Objective value: 905,878,172</dd>
+        <dd>Computed using a modified version of Bienstock &amp; Zuckerberg
+          algorithm.<a href="http://mansci-web.uai.cl/minelib/zuck_small.xhtml#cite:bzipco2010">[*]</a><br />
+        </dd>
+    </dl>
+    <p />
+    <h2><a id="mozTocId492052" class="mozTocH2" />References:</h2>
+    <ul class="references">
+      <li><a id="cite:bzipco2010" />Daniel Bienstock,
+        Mark Zuckerberg (2010), Solving LP Relaxations of Large-Scale Precedence
+        Constrained Problems. IPCO 2010: 1-14</li>
+      <li><a id="cite:hochbaumpsudoflow" />Dorit
+        S. Hochbaum (2008), The Pseudoflow Algorithm: A New Algorithm for the
+        Maximum-Flow Problem. Operations Research 56(4): 992-1009<br />
+      </li>
+      <li><a id="cite:gmunoz_tesis" />Gonzalo Muñoz
+        (2012), Modelos de optimizacion lineal entera y aplicaciones a la
+        mineria. Master thesis, Dept. Mathematical Engineering, Universidad de
+        Chile.<br />
+      </li>
+    </ul>
+    <p class="logos">
+    <a href="http://validator.w3.org/check?uri=referer"><img src="./Instance_ zuck_small_files/valid-xhtml10-blue" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+    </p>
+    </div>
+  </body>
+</html>

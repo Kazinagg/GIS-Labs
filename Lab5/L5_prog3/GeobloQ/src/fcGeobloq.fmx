@@ -1,0 +1,86 @@
+object frmGeobloq: TfrmGeobloq
+  Left = 0
+  Top = 0
+  Camera = Camera1
+  Caption = 'GeobloqC'
+  Color = claBlack
+  ClientHeight = 480
+  ClientWidth = 640
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Camera1: TCamera
+    AngleOfView = 45.000000000000000000
+    Target = Cube1
+    Position.X = 3.024363994598389000
+    Position.Y = -4.214354515075684000
+    Position.Z = -4.000000000000000000
+    RotationAngle.X = 14.027465820312500000
+    RotationAngle.Y = 9.401623725891113000
+    RotationAngle.Z = -0.723548889160156300
+    Width = 1.163870334625244000
+    Height = 1.000000000000000000
+    Depth = 1.000000000000000000
+    Quanternion = 
+      '(-0.103536166250706,-0.244593799114227,0.0305989980697632,-0.963' +
+      '595449924469)'
+  end
+  object Cube1: TCube
+    Position.X = -3.820935249328613000
+    Position.Y = -3.293039560317993000
+    RotationAngle.Y = 30.042451858520510000
+    RotationAngle.Z = 30.978996276855470000
+    Width = 2.231285095214844000
+    Height = 1.000000000000000000
+    Depth = 1.000000000000000000
+    Quanternion = 
+      '(0.0692162662744522,-0.2497628480196,-0.257936626672745,-0.93074' +
+      '9535560608)'
+  end
+  object Sphere1: TSphere
+    Position.X = 0.037466190755367280
+    Position.Y = -0.454909324645996100
+    Scale.X = 3.000000000000000000
+    Scale.Y = 3.000000000000000000
+    Scale.Z = 3.000000000000000000
+    Width = 1.000000000000000000
+    Height = 1.000000000000000000
+    Depth = 1.000000000000000000
+    MaterialSource = ColorMaterialSource1
+  end
+  object LightMaterialSource1: TLightMaterialSource
+    Diffuse = claWhite
+    Ambient = xFF202020
+    Emissive = claNull
+    Specular = xFF606060
+    Shininess = 30
+    Left = 504
+    Top = 96
+  end
+  object Light1: TLight
+    Color = claWhite
+    LightType = Directional
+    SpotCutOff = 180.000000000000000000
+    Position.X = 4.765036106109619000
+    Position.Y = 2.532884120941162000
+    Position.Z = 2.000000000000000000
+    Width = 1.000000000000000000
+    Height = 1.000000000000000000
+    Depth = 1.000000000000000000
+  end
+  object ColorMaterialSource1: TColorMaterialSource
+    Color = claSeagreen
+    Left = 488
+    Top = 232
+  end
+  object TextureMaterialSource1: TTextureMaterialSource
+    Left = 474
+    Top = 270
+    object BitmapAnimation1: TBitmapAnimation
+      Duration = 0.200000002980232200
+      PropertyName = 'Texture'
+    end
+  end
+end

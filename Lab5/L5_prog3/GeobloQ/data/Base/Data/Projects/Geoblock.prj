@@ -1,0 +1,14 @@
+VERSION 65536
+COMMENT Written by : Geoblock Team
+COMMENT Date       : 18.05.2025 19:05:05
+
+COMMENT DHOLES Models\Dholes\
+COMMENT POINTS2D Models\Points2D\
+COMMENT POINTS3D Models\Points3D\
+COMMENT POLYGONS Models\Polygons\Poly\
+COMMENT TIN Models\Tins\Faces\
+COMMENT SOLIDS Models\Solids\
+COMMENT GRID2D Models\Grids2D\
+COMMENT GRID3D Models\Grids3D\
+COMMENT MESH2D Models\Meshes2D\
+COMMENT MESH3D Models\Meshes3D\

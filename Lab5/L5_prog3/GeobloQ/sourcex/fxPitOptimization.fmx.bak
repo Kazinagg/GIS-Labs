@@ -1,0 +1,94 @@
+inherited FormPitOptimization: TFormPitOptimization
+  Caption = 'Pit Optimization'
+  ClientHeight = 288
+  Position = ScreenCenter
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  inherited PanelMiddle: TPanel
+    Size.Height = 192.000000000000000000
+    object Panel1: TPanel
+      Align = Client
+      Padding.Left = 10.000000000000000000
+      Size.Width = 588.000000000000000000
+      Size.Height = 192.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object LabelMethod: TLabel
+        Align = Top
+        Position.X = 10.000000000000000000
+        Size.Width = 578.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Method'
+        TabOrder = 0
+      end
+      object rbFloatingCone: TRadioButton
+        GroupName = 'Method'
+        IsChecked = True
+        Position.X = 80.000000000000000000
+        Position.Y = 40.000000000000000000
+        Size.Width = 241.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 6
+        Text = 'Floating Cone'
+      end
+      object rbLerchsGrossmann: TRadioButton
+        GroupName = 'Method'
+        Position.X = 80.000000000000000000
+        Position.Y = 80.000000000000000000
+        Size.Width = 233.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        Text = 'Lerchs Grossmann'
+      end
+      object rbPseudoFlow: TRadioButton
+        GroupName = 'Method'
+        Position.X = 80.000000000000000000
+        Position.Y = 120.000000000000000000
+        Size.Width = 233.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        Text = 'Pseudo Flow'
+      end
+      object rbParticleSwarm: TRadioButton
+        GroupName = 'Method'
+        Position.X = 424.000000000000000000
+        Position.Y = 112.000000000000000000
+        Size.Width = 241.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'Particle Swarm'
+      end
+      object rbNeuralNetwork: TRadioButton
+        GroupName = 'Method'
+        Position.X = 424.000000000000000000
+        Position.Y = 76.000000000000000000
+        Size.Width = 249.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Neural Network'
+      end
+      object rbGeneticAlgorithm: TRadioButton
+        GroupName = 'Method'
+        Position.X = 424.000000000000000000
+        Position.Y = 40.000000000000000000
+        Size.Width = 241.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Genetic Algorithm'
+      end
+      object cbOpenCL: TCheckBox
+        Position.X = 264.000000000000000000
+        Position.Y = -32.000000000000000000
+        TabOrder = 7
+        Text = 'OpenCL'
+      end
+    end
+  end
+end

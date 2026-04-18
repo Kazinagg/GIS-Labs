@@ -1,0 +1,13 @@
+15.04.2026 20:21:51	Access violation at address 0000000062EFC000 in module 'Gexoblock_ru.exe' (offset 62EFC000). Execution of address 0000000062EFC000
+15.04.2026 20:32:00	Access violation at address 0000000062EFC000 in module 'Gexoblock_ru.exe' (offset 62EFC000). Execution of address 0000000062EFC000
+15.04.2026 23:52:06	Access violation at address 00000000D8EFC000 in module 'Gexoblock_ru.exe' (offset D8EFC000). Execution of address 00000000D8EFC000
+16.04.2026 0:00:43	Access violation at address 000000000003F095 in module 'Gexoblock_ru.exe' (offset F095). Read of address FFFFFFFFFFFFFFFF
+16.04.2026 0:09:11	Access violation at address 000000000015F095 in module 'Gexoblock_ru.exe' (offset F095). Read of address FFFFFFFFFFFFFFFF
+16.04.2026 0:40:25	Access violation at address 0000000055EFC000 in module 'Gexoblock_ru.exe' (offset 55EFC000). Execution of address 0000000055EFC000
+16.04.2026 0:54:56	Access violation at address 000000003FEFC000 in module 'Gexoblock_ru.exe' (offset 3FEFC000). Execution of address 000000003FEFC000
+16.04.2026 0:57:56	Access violation at address 000000000128BF3E in module 'Gexoblock_ru.exe' (offset 83BF3E). Read of address 000000000000015C
+16.04.2026 0:58:13	Access violation at address 00000000A5EFC000 in module 'Gexoblock_ru.exe' (offset A5EFC000). Execution of address 00000000A5EFC000
+18.04.2026 18:10:52	Access violation at address 00000000DDEFC000 in module 'Gexoblock_ru.exe' (offset DDEFC000). Execution of address 00000000DDEFC000
+18.04.2026 18:13:40	Access violation at address 0000000070EFC000 in module 'Gexoblock_ru.exe' (offset 70EFC000). Execution of address 0000000070EFC000
+18.04.2026 18:20:09	Access violation at address 000000000179BF3E in module 'Gexoblock_ru.exe' (offset 83BF3E). Read of address 000000000000015C
+

@@ -1,0 +1,145 @@
+body{
+  font-size: 13px;
+  font-family: arial,helvetica,clean,sans-serif;
+}
+h1{font-size:138.5%;}
+h2{font-size:123.1%;}
+h3{font-size:108%;}
+h1,h2,h3{margin:1em 0;}
+h1,h2,h3,h4,h5,h6,strong{font-weight:bold;}
+abbr,acronym{border-bottom:1px dotted #000;cursor:help;}
+em{font-style:italic;}
+caption{margin-bottom:.5em;text-align:center;}
+p,fieldset,table,pre{margin-bottom:1em;}
+ul {list-style-type:square;}
+a:link,a:visited{
+	color: blue;
+	text-decoration: none;
+}
+a:hover,a:active {
+	text-decoration: underline;
+}
+
+p.description{
+	margin: 30px;
+	width: 500px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	background-color:#E8F4FF;
+}
+
+div.navbar ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+div.navbar li{
+	float:left;
+}
+
+div.navbar a:link, div.navbar a:visited {
+	display:block;
+	width:135px;
+	font-weight:bold;
+	color:#FFFFFF;
+	background-color:#1E90FF;
+	text-align:center;
+	padding:5px;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+
+div.navbar a:hover,div.navbar a:active {
+	background-color:#4169E1;
+}
+
+ul.references {
+	font-size:75%;
+	font-style:italic;
+}
+
+td {
+	text-align: right;
+}
+
+tr > :first-child {
+  text-align: left;
+  vertical-align: middle;
+}
+
+thead {
+	text-align: center;
+}
+
+table {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	background: #fff;
+	margin: 45px;
+	width: 480px;
+	border-collapse: collapse;
+	text-align: left;
+}
+th
+{
+	font-size: 14px;
+	font-weight: normal;
+	color: #039;
+	padding: 10px 8px;
+	border-bottom: 2px solid #6678b1;
+}
+
+td
+{
+	border-bottom: 1px solid #ccc;
+	color: #669;
+	padding: 6px 8px;
+}
+tbody tr:hover td
+{
+	color: #009;
+	background: #eff2ff;
+}
+
+#toc {
+	margin-left: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 10px;
+	width: 100px;
+	background-color: #E8F4FF;
+}
+
+#toc h3 {
+	margin-top: 0px;
+	margin-bottom: 5px;
+	text-decoration: underline;
+}
+
+#toc li {
+	overflow: hidden;
+	padding-bottom: 2px;
+}
+
+img.mine_image {
+	float: right;
+	margin: 4px;
+}
+
+#wrap { 
+  width: 580px; 
+  margin: 0 auto; 
+}
+
+p.logos{
+  text-align: right;
+} 
+li#content {
+	font-weight:bold;
+	font-size:108%;
+}
+

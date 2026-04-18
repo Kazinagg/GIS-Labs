@@ -1,0 +1,35 @@
+object fmFileDataBrowser: TfmFileDataBrowser
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biHelp]
+  BorderStyle = SizeToolWin
+  Caption = 'Database Browser'
+  ClientHeight = 532
+  ClientWidth = 332
+  Position = ScreenCenter
+  FormStyle = StayOnTop
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  ShowFullScreenIcon = True
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object PanelLeft: TPanel
+    Align = Client
+    Size.Width = 332.000000000000000000
+    Size.Height = 532.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    object TreeView: TTreeView
+      Align = Client
+      Size.Width = 332.000000000000000000
+      Size.Height = 532.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      ParentShowHint = False
+      ShowHint = False
+      Viewport.Width = 328.000000000000000000
+      Viewport.Height = 528.000000000000000000
+    end
+  end
+end

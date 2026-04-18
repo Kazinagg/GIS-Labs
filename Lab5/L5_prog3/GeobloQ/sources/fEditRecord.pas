@@ -1,0 +1,40 @@
+//------------------------------------------------------------------------------
+// The modeling system Geoblock http://sourceforge.net/projects/geoblock
+//------------------------------------------------------------------------------
+(*  The form to edit record on screen *)
+
+unit fEditRecord;
+
+interface
+
+uses
+  Winapi.Windows, 
+  Winapi.Messages, 
+  System.SysUtils, 
+  System.Classes, 
+  Vcl.Graphics, 
+  Vcl.Controls, 
+  Vcl.Forms, 
+  Vcl.Dialogs,
+
+  Vcl.StdCtrls, 
+  Vcl.ExtCtrls,
+  
+  fmBlankDialog;
+
+type
+  TfmInitialDialog1 = class(TFormBlankDialog)
+  private
+     
+  public
+     
+  end;
+
+var
+  fmInitialDialog1: TfmInitialDialog1;
+
+implementation
+
+{$R *.DFM}
+
+end.
