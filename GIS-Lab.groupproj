@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{896DE718-793E-4C7A-A504-BC8031CC3AE3}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Lab3\GlobeApp.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Lab4\GpsMap.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Lab5\L5_prog3\GeobloQ\projects\Gexoblock_ru.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="GlobeApp">
+        <MSBuild Projects="Lab3\GlobeApp.cbproj"/>
+    </Target>
+    <Target Name="GlobeApp:Clean">
+        <MSBuild Projects="Lab3\GlobeApp.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GlobeApp:Make">
+        <MSBuild Projects="Lab3\GlobeApp.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="GpsMap">
+        <MSBuild Projects="Lab4\GpsMap.dproj"/>
+    </Target>
+    <Target Name="GpsMap:Clean">
+        <MSBuild Projects="Lab4\GpsMap.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GpsMap:Make">
+        <MSBuild Projects="Lab4\GpsMap.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Gexoblock_ru">
+        <MSBuild Projects="Lab5\L5_prog3\GeobloQ\projects\Gexoblock_ru.dproj"/>
+    </Target>
+    <Target Name="Gexoblock_ru:Clean">
+        <MSBuild Projects="Lab5\L5_prog3\GeobloQ\projects\Gexoblock_ru.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Gexoblock_ru:Make">
+        <MSBuild Projects="Lab5\L5_prog3\GeobloQ\projects\Gexoblock_ru.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="GlobeApp;GpsMap;Gexoblock_ru"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="GlobeApp:Clean;GpsMap:Clean;Gexoblock_ru:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="GlobeApp:Make;GpsMap:Make;Gexoblock_ru:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
