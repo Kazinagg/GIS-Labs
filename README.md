@@ -111,7 +111,7 @@ $$Z = 100 \cdot e^{-\frac{(X-50)^2+(Y-50)^2}{1000}} - 30 \cdot e^{-\frac{(X-Y)^2
     <td align="center" width="50%"><img src="Lab3/image-2.png" width="100%"><br><i>Слой: Температура</i></td>
   </tr>
   <tr>
-    <td colspan="2" align="center"><img src="Lab3/image.png" width="70%"><br><i>Общий вид с наложенной сеткой координат</i></td>
+    <td colspan="2" align="center"><img src="Lab3/image.png" width="70%"><br><i>Общий вид</i></td>
   </tr>
 </table>
 
