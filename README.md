@@ -108,18 +108,21 @@ $$Z = 100 \cdot e^{-\frac{(X-50)^2+(Y-50)^2}{1000}} - 30 \cdot e^{-\frac{(X-Y)^2
 - <kbd>UI TreeView</kbd>: Переключение текстурных слоев (Топография / Температура).
 
 #### 📸 Галерея интерфейса:
-<!-- Объединение трех картинок в компактную галерею -->
-<table align="center">
+<table align="center" style="border-collapse: collapse; border: none;">
   <tr>
-    <td align="center" width="50%"><img src="Lab3/image-1.png" width="100%"><br><i>Слой: Топография</i></td>
-    <td align="center" width="50%"><img src="Lab3/image-2.png" width="100%"><br><i>Слой: Температура</i></td>
+    <td align="center"><img src="img/image-0.png" width="400"><br><b>1. Моделирование геометрии</b></td>
+    <td align="center"><img src="img/image-1.png" width="400"><br><b>2. Привязка к координатам</b></td>
   </tr>
   <tr>
-    <td colspan="2" align="center"><img src="Lab3/image.png" width="70%"><br><i>Общий вид с наложенной сеткой координат</i></td>
+    <td align="center"><img src="img/image-2.png" width="400"><br><b>3. Сохранение в формате KMZ</b></td>
+    <td align="center"><img src="img/image-3.png" width="400"><br><b>4. Интеграция в Google Earth</b></td>
   </tr>
 </table>
 
-<div align="right"><a href="#-навигация-по-работам">⬆ Наверх к меню</a></div>
+<p align="center">
+  <b>🎬 Демонстрация результата: Вращение модели</b><br>
+  <video src="img/20260422-1602-10.5510560.mp4" width="800" controls muted autoplay loop></video>
+</p>
 
 ---
 
