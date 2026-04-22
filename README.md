@@ -79,12 +79,14 @@ $$Z = 100 \cdot e^{-\frac{(X-50)^2+(Y-50)^2}{1000}} - 30 \cdot e^{-\frac{(X-Y)^2
     <td align="center"><img src="img/image-2.png" width="400"><br><b>3. Сохранение в формате KMZ</b></td>
     <td align="center"><img src="img/image-3.png" width="400"><br><b>4. Интеграция в Google Earth</b></td>
   </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <br>
+      <b>🎬 Демонстрация результата: Вращение модели</b><br>
+      <img src="img/Recording 2026-04-22 191118.gif" width="800">
+    </td>
+  </tr>
 </table>
-
-<p align="center">
-  <b>🎬 Демонстрация результата: Вращение модели</b><br>
-  <video src="img/20260422-1602-10.5510560.mp4" width="800" controls muted autoplay loop></video>
-</p>
 
 ---
 
