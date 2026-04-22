@@ -1,7 +1,7 @@
 
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=00599C&height=120&section=header&fontSize=40&fontAlignY=35" />
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=26&pause=1000&color=00599C&center=true&vCenter=true&width=800&lines=🌍+Основы+Геоинформационных+систем;Итоговый+отчет+по+лабораторным+работам;НИУ+БелГУ+|+2026" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=26&pause=1000&color=00599C&center=true&vCenter=true&width=800&lines=+Основы+Геоинформационных+систем;Итоговый+отчет+по+лабораторным+работам;НИУ+БелГУ+|+2026" alt="Typing SVG" />
 </div>
 
 <p align="center">
@@ -34,11 +34,11 @@
 ## 📑 Навигация по работам
 | ЛР | Тема | Инструменты | Готовность |
 | :---: | :--- | :--- | :---: |
-| **1** |[Построение карт в изолиниях](#-лабораторная-работа-1) | `Surfer` | ![100%](https://progress-bar.dev/100/?scale=100&color=2ea44f&suffix=%) |
-| **2** | [3D объект с геопривязкой](#-лабораторная-работа-2) | `SketchUp`, `Google Earth` | ![100%](https://progress-bar.dev/100/?scale=100&color=2ea44f&suffix=%) |
-| **3** | [3D Глобус и триангуляция](#-лабораторная-работа-3) | `C++`, `GLScene` | ![100%](https://progress-bar.dev/100/?scale=100&color=2ea44f&suffix=%) |
-| **4** | [Android GPS Навигатор](#-лабораторная-работа-4) | `FireMonkey`, `GPS API` | ![100%](https://progress-bar.dev/100/?scale=100&color=2ea44f&suffix=%) |
-| **5** | [Локализация интерфейса](#-лабораторная-работа-5) | `i18n`, `Delphi` | ![100%](https://progress-bar.dev/100/?scale=100&color=2ea44f&suffix=%) |
+| **1** |[Построение карт в изолиниях](#-лабораторная-работа-1) | `Surfer` | ✅ |
+| **2** | [3D объект с геопривязкой](#-лабораторная-работа-2) | `SketchUp`, `Google Earth` | ✅ |
+| **3** | [3D Глобус и триангуляция](#-лабораторная-работа-3) | `C++`, `GLScene` | ✅ |
+| **4** | [Android GPS Навигатор](#-лабораторная-работа-4) | `FireMonkey`, `GPS API` | ✅ |
+| **5** | [Локализация интерфейса](#-лабораторная-работа-5) | `Delphi` | ✅ |
 
 ---
 
@@ -78,6 +78,15 @@ $$Z = 100 \cdot e^{-\frac{(X-50)^2+(Y-50)^2}{1000}} - 30 \cdot e^{-\frac{(X-Y)^2
   <tr>
     <td align="center"><img src="img/image-2.png" width="400"><br><b>3. Сохранение в формате KMZ</b></td>
     <td align="center"><img src="img/image-3.png" width="400"><br><b>4. Интеграция в Google Earth</b></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <br>
+      <blockquote><b>🎬 Демонстрация результата: Вращение модели</b></blockquote>
+      <video src="img/20260422-1602-10.5510560.mp4" width="800" controls muted loop autoplay>
+        Ваш браузер не поддерживает тег видео.
+      </video>
+    </td>
   </tr>
 </table>
 
